@@ -19,7 +19,7 @@ export default {
         calcHeight: "calc(100vh - 115px)",
       },
       minWidth: {
-        "min-200": "200px",
+        "min-200": "150px",
       },
     },
   },
