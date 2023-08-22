@@ -1,14 +1,18 @@
-const Header = ({ planetsData }) => {
+const Header = ({ planetsData, setActivePlanet }) => {
   return (
     <>
       <div className="flex justify-between p-10">
-        <div className="text-white text-2xl">THE PLANETS</div>
+        <div className="text-2xl">THE PLANETS</div>
         <div className="flex gap-3">
           {planetsData.map((p) => {
             return (
-              <a key={p.id} href="#" className="text-white/75">
+              <span
+                key={p.id}
+                onClick={() => setActivePlanet(p.id)}
+                className="text-white/75"
+              >
                 {p.name}
-              </a>
+              </span>
             );
           })}
         </div>
