@@ -37,7 +37,7 @@ const Header = ({
               <span
                 key={p.id}
                 onClick={() => setActivePlanet(p.id)}
-                className="text-white/75"
+                className="text-white/75 hover:text-white  cursor-pointer"
               >
                 {p.name}
               </span>
@@ -45,7 +45,11 @@ const Header = ({
           })}
         </div>
         <div className=" sm:hidden">
-          <img src={menuIcon} onClick={() => setShowMenu(!showMenu)} />
+          <img
+            src={menuIcon}
+            onClick={() => setShowMenu(!showMenu)}
+            className=" cursor-pointer"
+          />
         </div>
       </div>
       <div className="h-px1 w-full bg-white/20"></div>
