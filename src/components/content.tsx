@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import ContentCategoryButtons from "./content.category.buttons";
 import MobileCategoryButtons from "./moble.category.buttons";
 
