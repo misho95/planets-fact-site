@@ -14,6 +14,7 @@ interface planetsDataType {
   radius: string;
   averageTemp: string;
   color: string;
+  link: string;
 }
 
 interface PropsType {
@@ -80,7 +81,7 @@ const Content = ({ dataToSend }: PropsType) => {
               <p className="w-80 text-center sm:text-left">{dataToSend.info}</p>
               <span className="text-white/30 text-center sm:text-left">
                 Source{" "}
-                <a href="#" className="text-white/50 underline">
+                <a href={dataToSend.link} className="text-white/50 underline">
                   Wikipedia
                 </a>
               </span>

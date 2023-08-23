@@ -39,6 +39,7 @@ interface planetsDataType {
   radius: string;
   averageTemp: string;
   color: string;
+  link: string;
 }
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
       radius: "2,439.7 km",
       averageTemp: "430",
       color: "mercury_bg",
+      link: "https://en.wikipedia.org/wiki/Mercury",
     },
     {
       id: 1,
@@ -68,6 +70,7 @@ function App() {
       radius: "6,051.8 km",
       averageTemp: "471",
       color: "venus_bg",
+      link: "https://en.wikipedia.org/wiki/venus",
     },
     {
       id: 2,
@@ -81,6 +84,7 @@ function App() {
       radius: "6,371 km",
       averageTemp: "16",
       color: "earth_bg",
+      link: "https://en.wikipedia.org/wiki/earth",
     },
     {
       id: 3,
@@ -94,6 +98,7 @@ function App() {
       radius: "3,389.5 km",
       averageTemp: "-28",
       color: "mars_bg",
+      link: "https://en.wikipedia.org/wiki/mars",
     },
     {
       id: 4,
@@ -107,6 +112,7 @@ function App() {
       radius: "69,911 km",
       averageTemp: "-108",
       color: "jupiter_bg",
+      link: "https://en.wikipedia.org/wiki/jupiter",
     },
     {
       id: 5,
@@ -120,6 +126,7 @@ function App() {
       radius: "58,232 km",
       averageTemp: "-138",
       color: "saturn_bg",
+      link: "https://en.wikipedia.org/wiki/satrun",
     },
     {
       id: 6,
@@ -133,6 +140,7 @@ function App() {
       radius: "25,362 km",
       averageTemp: "195",
       color: "uranus_bg",
+      link: "https://en.wikipedia.org/wiki/uranus",
     },
     {
       id: 7,
@@ -146,6 +154,7 @@ function App() {
       radius: "24,622 km",
       averageTemp: "-201",
       color: "neptune_bg",
+      link: "https://en.wikipedia.org/wiki/neptune",
     },
   ];
 
