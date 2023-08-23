@@ -17,6 +17,7 @@ export default {
       height: {
         px1: "1px",
         calcHeight: "calc(100vh - 115px)",
+        sliderMenuH: "calc(100vh - 112px)",
       },
       minWidth: {
         "min-200": "150px",

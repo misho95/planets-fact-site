@@ -1,6 +1,32 @@
 import menuIcon from "../assets/icon-hamburger.svg";
 
-const Header = ({ planetsData, setActivePlanet }) => {
+interface planetsDataType {
+  id: number;
+  name: string;
+  info: string;
+  icon: string;
+  internalStructureIcon: string;
+  surfaceIcon: string;
+  rotationTime: string;
+  revolutionTime: string;
+  radius: string;
+  averageTemp: string;
+  color: string;
+}
+
+interface PropsType {
+  planetsData: planetsDataType[];
+  setActivePlanet: (id: number) => void;
+  showMenu: boolean;
+  setShowMenu: (arg0: boolean) => void;
+}
+
+const Header = ({
+  planetsData,
+  setActivePlanet,
+  showMenu,
+  setShowMenu,
+}: PropsType) => {
   return (
     <>
       <div className="flex sm:flex-col gap-5 lg:gap-0 justify-between p-10 lg:flex-row">
@@ -19,7 +45,7 @@ const Header = ({ planetsData, setActivePlanet }) => {
           })}
         </div>
         <div className=" sm:hidden">
-          <img src={menuIcon} />
+          <img src={menuIcon} onClick={() => setShowMenu(!showMenu)} />
         </div>
       </div>
       <div className="h-px1 w-full bg-white/20"></div>

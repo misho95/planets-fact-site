@@ -25,9 +25,24 @@ import uranusSurfaceImg from "./assets/geology-uranus.png";
 import neptuneImg from "./assets/planet-neptune.svg";
 import neptuneInternalImg from "./assets/planet-neptune-internal.svg";
 import neptuneSurfaceImg from "./assets/geology-neptune.png";
+import SliderMenu from "./components/slider.menu";
+
+interface planetsDataType {
+  id: number;
+  name: string;
+  info: string;
+  icon: string;
+  internalStructureIcon: string;
+  surfaceIcon: string;
+  rotationTime: string;
+  revolutionTime: string;
+  radius: string;
+  averageTemp: string;
+  color: string;
+}
 
 function App() {
-  const planetsData = [
+  const planetsData: planetsDataType[] = [
     {
       id: 0,
       name: "Mercury",
@@ -39,6 +54,7 @@ function App() {
       revolutionTime: "87.97 Days",
       radius: "2,439.7 km",
       averageTemp: "430",
+      color: "mercury_bg",
     },
     {
       id: 1,
@@ -51,6 +67,7 @@ function App() {
       revolutionTime: "224.7 Days",
       radius: "6,051.8 km",
       averageTemp: "471",
+      color: "venus_bg",
     },
     {
       id: 2,
@@ -63,6 +80,7 @@ function App() {
       revolutionTime: "365.26 Days",
       radius: "6,371 km",
       averageTemp: "16",
+      color: "earth_bg",
     },
     {
       id: 3,
@@ -75,6 +93,7 @@ function App() {
       revolutionTime: "1.88 Years",
       radius: "3,389.5 km",
       averageTemp: "-28",
+      color: "mars_bg",
     },
     {
       id: 4,
@@ -87,6 +106,7 @@ function App() {
       revolutionTime: "11.86 years",
       radius: "69,911 km",
       averageTemp: "-108",
+      color: "jupiter_bg",
     },
     {
       id: 5,
@@ -99,6 +119,7 @@ function App() {
       revolutionTime: "29.46 years",
       radius: "58,232 km",
       averageTemp: "-138",
+      color: "saturn_bg",
     },
     {
       id: 6,
@@ -111,6 +132,7 @@ function App() {
       revolutionTime: "84 years",
       radius: "25,362 km",
       averageTemp: "195",
+      color: "uranus_bg",
     },
     {
       id: 7,
@@ -123,11 +145,13 @@ function App() {
       revolutionTime: "164.79 years",
       radius: "24,622 km",
       averageTemp: "-201",
+      color: "neptune_bg",
     },
   ];
 
-  const [activePlanet, setActivePlanet] = useState(0);
-  const [dataToSend, setDataToSend] = useState();
+  const [activePlanet, setActivePlanet] = useState<number>(0);
+  const [dataToSend, setDataToSend] = useState<planetsDataType | undefined>();
+  const [showMenu, setShowMenu] = useState<boolean>(false);
 
   useEffect(() => {
     setDataToSend(planetsData[activePlanet]);
@@ -135,8 +159,20 @@ function App() {
 
   return (
     <>
-      <Header setActivePlanet={setActivePlanet} planetsData={planetsData} />
-      <Content dataToSend={dataToSend} />
+      <Header
+        setActivePlanet={setActivePlanet}
+        planetsData={planetsData}
+        showMenu={showMenu}
+        setShowMenu={setShowMenu}
+      />
+      {showMenu && (
+        <SliderMenu
+          planetsData={planetsData}
+          setActivePlanet={setActivePlanet}
+          setShowMenu={setShowMenu}
+        />
+      )}
+      {!showMenu && <Content dataToSend={dataToSend} />}
     </>
   );
 }
