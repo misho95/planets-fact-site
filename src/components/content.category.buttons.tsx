@@ -17,9 +17,7 @@ const ContentCategoryButtons = ({
     <button
       onClick={() => setActive(id)}
       className={`flex gap-3 w-full ${
-        active === id
-          ? `bg-${color}`
-          : "bg-transparent border-2 border-white/20"
+        active === id ? color : "bg-transparent border-2 border-white/20"
       } p-3`}
     >
       <span className="text-white/50">0{id}</span>

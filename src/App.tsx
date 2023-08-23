@@ -55,7 +55,7 @@ function App() {
       revolutionTime: "87.97 Days",
       radius: "2,439.7 km",
       averageTemp: "430",
-      color: "mercury_bg",
+      color: "bg-mercury_bg",
       link: "https://en.wikipedia.org/wiki/Mercury",
     },
     {
@@ -69,7 +69,7 @@ function App() {
       revolutionTime: "224.7 Days",
       radius: "6,051.8 km",
       averageTemp: "471",
-      color: "venus_bg",
+      color: "bg-venus_bg",
       link: "https://en.wikipedia.org/wiki/venus",
     },
     {
@@ -83,7 +83,7 @@ function App() {
       revolutionTime: "365.26 Days",
       radius: "6,371 km",
       averageTemp: "16",
-      color: "earth_bg",
+      color: "bg-earth_bg",
       link: "https://en.wikipedia.org/wiki/earth",
     },
     {
@@ -97,7 +97,7 @@ function App() {
       revolutionTime: "1.88 Years",
       radius: "3,389.5 km",
       averageTemp: "-28",
-      color: "mars_bg",
+      color: "bg-mars_bg",
       link: "https://en.wikipedia.org/wiki/mars",
     },
     {
@@ -111,7 +111,7 @@ function App() {
       revolutionTime: "11.86 years",
       radius: "69,911 km",
       averageTemp: "-108",
-      color: "jupiter_bg",
+      color: "bg-jupiter_bg",
       link: "https://en.wikipedia.org/wiki/jupiter",
     },
     {
@@ -125,7 +125,7 @@ function App() {
       revolutionTime: "29.46 years",
       radius: "58,232 km",
       averageTemp: "-138",
-      color: "saturn_bg",
+      color: "bg-saturn_bg",
       link: "https://en.wikipedia.org/wiki/satrun",
     },
     {
@@ -139,7 +139,7 @@ function App() {
       revolutionTime: "84 years",
       radius: "25,362 km",
       averageTemp: "195",
-      color: "uranus_bg",
+      color: "bg-uranus_bg",
       link: "https://en.wikipedia.org/wiki/uranus",
     },
     {
@@ -153,7 +153,7 @@ function App() {
       revolutionTime: "164.79 years",
       radius: "24,622 km",
       averageTemp: "-201",
-      color: "neptune_bg",
+      color: "bg-neptune_bg",
       link: "https://en.wikipedia.org/wiki/neptune",
     },
   ];

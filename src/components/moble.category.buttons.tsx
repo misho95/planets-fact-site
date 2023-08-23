@@ -14,11 +14,11 @@ const MobileCategoryButtons = ({
   setActive,
 }: propsType) => {
   return (
-    <button
-      onClick={() => setActive(id)}
-      className={`${active === id ? `border-b-2` : ""} text-${color} p-3`}
-    >
+    <button onClick={() => setActive(id)} className={`p-3`}>
       {title}
+      <div
+        className={`h-px1 mt-3 ${active === id ? color : "transparent"}`}
+      ></div>
     </button>
   );
 };
